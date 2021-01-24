@@ -1,0 +1,18 @@
+.main-container {
+  position: relative;
+}
+.trending-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper-slide {
+  background-color: #4a001f;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}

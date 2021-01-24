@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2e0219;
+}
+
+h2 {
+  font-family: "Limelight", cursive;
+  color: #dababa;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.hidden {
+  display: none;
+}
+.fa-film {
+  color: #1d0210;
+  background: #dababa;
+  border-radius: 5px;
+  padding: 8px;
+  border-style: dotted;
+  border-color: #1d0210;
+  cursor: pointer;
+}
+.btn-div {
+  margin-left: 14px;
+}
+.btn {
+  font-family: "Limelight", cursive;
+  color: #dababa;
+  background-color: #2e0219;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 140px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-btn {
+  border-radius: 7px;
+  background-color: #4a001f;
+  color: #dababa;
+  margin: 10px;
+  padding: 5px;
+  width: 75px;
+  cursor: pointer;
+  font-family: "Limelight", cursive;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #dababa;
+  overflow: hidden;
+}
+
+.genre-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.genre-label {
+  padding-left: 5px;
+  margin: 5px;
+  color: #dababa;
+}
+
+.title-label {
+  font-size: 18px;
+  margin: 5px;
+  color: #dababa;
+}
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  content: "next";
+  color: black;
+}
+
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  content: "prev";
+  color: black;
+}
+
+.swiper.s-wrapper .swiper-wrapper .swiper-slide ::-webkit-scrollbar {
+  height: 1000%;
+  max-height: 1000%;
+  max-width: 100%;
+  width: 100%;
+  will-change: transform;
+  display: none;
+}
+
+.backdrop {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  color: black;
+}
+
+.overview {
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.rating {
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.release-date {
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+}

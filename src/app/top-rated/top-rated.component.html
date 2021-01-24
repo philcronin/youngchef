@@ -1,0 +1,36 @@
+<div class="details-container" *ngIf="showId === slideRef.id">
+  <div class="backdrop">
+    <img
+      src="https://image.tmdb.org/t/p/w185/{{ slideRef.backdrop_path }}"
+      alt=""
+    />
+  </div>
+  <div>
+    <h2 class="title">{{ slideRef.title }}</h2>
+    <p class="overview">{{ slideRef.overview }}</p>
+    <p class="rating">Rating: {{ slideRef.vote_average }}</p>
+    <p class="release-date">Release Date: {{ slideRef.release_date }}</p>
+  </div>
+  <button class="btn" (click)="toggleShowId(slideRef.id)">Close Details</button>
+</div>
+<div class="movie-container swiper-slide">
+  <div class="movie-poster">
+    <img [src]="image" />
+  </div>
+  <div class="btn-div">
+    <button
+      class="fa fa-film"
+      aria-hidden="true"
+      (click)="sendToWatchList(slideRef)"
+    ></button
+    ><button class="btn" (click)="toggleShowId(slideRef.id)">Details</button>
+  </div>
+  <div>
+    <p class="title-label">{{ slideRef.original_title }}</p>
+  </div>
+  <div class="genre-container">
+    <div class="genre" *ngFor="let genre of movieGenres">
+      <p class="genre-label">{{ genre }},</p>
+    </div>
+  </div>
+</div>

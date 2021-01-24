@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="header-logo">
+    <img
+      src="../assets/header-logo.png"
+      alt="Quarantine Cinema Logo"
+      routerLink="/home"
+    />
+  </div>
+  <div class="search-container">
+    <nav>
+      <ol class="nav-list">
+        <li class="nav-item">
+          <a class="nav-anchor" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-anchor" routerLink="/watch-list">Watch List</a>
+        </li>
+      </ol>
+    </nav>
+    <form
+      #searchForm="ngForm"
+      class="search-bar"
+      (ngSubmit)="getSearchTerm(searchForm)"
+    >
+      <input
+        type="text"
+        name="search"
+        id="search"
+        placeholder="titles, actors, genre"
+        ngModel
+      />
+      <button class="search-btn">Search</button>
+    </form>
+  </div>
+</header>

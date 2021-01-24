@@ -1,0 +1,49 @@
+<section class="main-contianer">
+  <app-header class="header"></app-header>
+
+  <h2 class="section-title">Trending Movies</h2>
+  <swiper [config]="config" class="swiper-container">
+    <div class="swiper-wrapper">
+      <app-trending
+        *ngFor="let slide of trendingData?.results"
+        class="swiper-slide"
+        [slideRef]="slide"
+        [genreList]="genres.genres"
+        (watchListEvent)="sendToWatchList($event)"
+      >
+      </app-trending>
+    </div>
+    <!-- <div class="swiper-button-prev swiper-pagination"></div>
+  <div class="swiper-button-next swiper-pagination"></div> -->
+  </swiper>
+
+  <h2 class="section-title">Top-Rated Movies</h2>
+  <swiper [config]="config" class="swiper-container">
+    <div class="swiper-wrapper">
+      <app-top-rated
+        *ngFor="let slide of topRated?.results"
+        class="swiper-slide"
+        [slideRef]="slide"
+        [genreList]="genres.genres"
+        (watchListEvent)="sendToWatchList($event)"
+      ></app-top-rated>
+    </div>
+  </swiper>
+
+  <h2 class="section-title">Popular Movies</h2>
+  <swiper [config]="config" class="swiper-container">
+    <div class="swiper-wrapper">
+      <app-popular
+        *ngFor="let slide of popular?.results"
+        class="swiper-slide"
+        [slideRef]="slide"
+        [genreList]="genres.genres"
+        (watchListEvent)="sendToWatchList($event)"
+      ></app-popular>
+    </div>
+    <!-- <div class="swiper-button-prev swiper-pagination"></div>
+  <div class="swiper-button-next swiper-pagination"></div> -->
+  </swiper>
+
+  <app-footer class="footer"></app-footer>
+</section>

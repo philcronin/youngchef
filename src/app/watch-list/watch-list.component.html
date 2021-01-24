@@ -1,0 +1,32 @@
+<app-header></app-header>
+<section *ngFor="let movie of watchList">
+  <div class="details-container hidden">
+    <div class="backdrop">
+      <img
+        src="https://image.tmdb.org/t/p/w185/{{ movie.backdrop_path }}"
+        alt=""
+      />
+    </div>
+    <div>
+      <h2 class="title">{{ movie.title }}</h2>
+
+      <p class="overview">{{ movie.overview }}</p>
+      <p class="rating">Rating: {{ movie.vote_average }}</p>
+      <p class="release-date">Release Date: {{ movie.release_date }}</p>
+    </div>
+  </div>
+  <div>
+    <img src="{{ movie.image }}" alt="movie poster" />
+  </div>
+  <div class="btn-div">
+    <button
+      class="fa fa-film"
+      aria-hidden="true"
+      (click)="sendToWatchList(movie)"
+    ></button
+    ><button class="btn">Details</button>
+  </div>
+  <div>
+    <p>{{ movie.title }}</p>
+  </div>
+</section>
